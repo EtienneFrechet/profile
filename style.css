@@ -138,49 +138,124 @@ button.primary.ghost:hover {
 }
 
 /* Example CSS for the toggle button */
-.toggle-container {
-  display: inline-block;
-  margin: 10px;
+#toggle_checkbox
+{
+    display: none;
 }
 
-.toggle-label {
-  margin-right: 5px;
+label
+{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 116px;
+    height: 56px;
+    margin: 0 auto;
+    background-color: #77b5fe;
+    border-radius: 56px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.3s ease background-color;
+    overflow: hidden;
 }
 
-.toggle-input {
-  display: none;
+
+
+.toggle-button {
+  position: fixed;
+  top: 5%;
+  right: 15%;
+  z-index: 999;
+}
+#star
+{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 30px;
+    height: 30px;
+    background-color: #fafd0f;
+    transform: scale(1);
+    border-radius: 50%;
+    transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform, 0.3s ease background-color;
+    z-index: 1;
 }
 
-.toggle-slider {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
-  background-color: #ccc;
-  border-radius: 20px;
-  transition: background-color 0.3s;
+#star-1
+{
+    position: relative;
 }
 
-.toggle-slider:before {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  background-color: #fff;
-  border-radius: 50%;
-  top: 1px;
-  left: 1px;
-  transition: transform 0.3s;
+#star-2
+{
+    position: absolute;
+    transform: rotateZ(36deg);
 }
 
-.toggle-input:checked + .toggle-slider {
-  background-color: #5DA7FF;
+.star
+{
+    top: 0;
+    left: -7px;
+    font-size: 54px;
+    line-height: 28px;
+    color: #fafd0f;
+    transition: 0.3s ease color;
 }
 
-.toggle-input:checked + .toggle-slider:before {
-  transform: translateX(20px);
+#moon
+{
+    position: absolute;
+    bottom: -52px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s ease bottom;
 }
 
+#moon:before
+{
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -17px;
+    width: 40px;
+    height: 40px;
+    background-color:#03a9f4;
+    border-radius: 50%;
+    transition: 0.3s ease background-color;
+}
+
+#toggle_checkbox:checked + label
+{
+    background-color: #000;
+}
+
+#toggle_checkbox:checked + label #star
+{
+    top: 3px;
+    left: 64px;
+    transform: scale(0.3);
+    background-color: yellow;
+}
+
+#toggle_checkbox:checked + label .star
+{
+    color: yellow;
+}
+
+#toggle_checkbox:checked + label #moon
+{
+    bottom: 8px;
+}
+
+#toggle_checkbox:checked + label #moon:before
+{
+    background-color: #000;
+}
 /* Additional styles for light mode */
 .light-mode {
   background-color: #caf0f8;
@@ -199,4 +274,27 @@ button.primary.ghost:hover {
 .light-mode .skills ul,
 .light-mode .skills ul li {
   /* Define styles for light mode elements */
+}
+
+
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
 }
