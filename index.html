@@ -3,34 +3,32 @@
 <head>
   <title>Etienne's profile</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <script>
-    function toggleSocialLinks() {
-      var socialLinks = document.getElementById("socialLinks");
-      socialLinks.classList.toggle("show");
-    }
-  </script>
 </head>
 <body>
-  <div class="toggle-container">
-    <label class="toggle-label" for="mode-toggle">Click Here:</label>
-    <input type="checkbox" id="mode-toggle" class="toggle-input">
-    <span class="toggle-slider"></span>
+  <div class="toggle-button">
+    <input type="checkbox" id="toggle_checkbox" checked>
+    <label for="toggle_checkbox">
+      <div id="star">
+        <div class="star" id="star-1">★</div>
+        <div class="star" id="star-2">★</div>
+      </div>
+      <div id="moon"></div>
+    </label>
   </div>
 
-
-  <!-- Include the JavaScript code here -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const modeToggle = document.getElementById("mode-toggle");
+      const modeToggle = document.getElementById("toggle_checkbox");
+      const body = document.body;
 
       modeToggle.addEventListener("change", function () {
-        document.body.classList.toggle("light-mode");
+        body.classList.toggle("light-mode");
       });
     });
   </script>
-
 
 <div class="card-container">
   <img class="round" src="images/etienne_profile_pic.jpg" alt="Etienne Frechet" />
