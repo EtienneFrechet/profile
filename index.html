@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Etienne's profile</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script>
+    function toggleSocialLinks() {
+      var socialLinks = document.getElementById("socialLinks");
+      socialLinks.classList.toggle("show");
+    }
+  </script>
+</head>
+<body>
+  <div class="toggle-container">
+    <label class="toggle-label" for="mode-toggle">Click Here:</label>
+    <input type="checkbox" id="mode-toggle" class="toggle-input">
+    <span class="toggle-slider"></span>
+  </div>
+
+
+  <!-- Include the JavaScript code here -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const modeToggle = document.getElementById("mode-toggle");
+
+      modeToggle.addEventListener("change", function () {
+        document.body.classList.toggle("light-mode");
+      });
+    });
+  </script>
+
+
+<div class="card-container">
+  <img class="round" src="images/etienne_profile_pic.jpg" alt="Etienne Frechet" />
+  <h3>Etienne Frechet</h3>
+  <h6>Taiwan</h6>
+  <p>Former Chef in Paris <br/> Now Student @LeWagon <br/> DO NOT CLICK ON MESSAGE ME</p>
+  <div class="buttons">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+      <button class="primary">
+        Message Me
+      </button>
+    </a>
+    <button class="primary ghost" onclick="toggleSocialLinks()">
+      Following
+    </button>
+  </div>
+</div>
+<div class="social-links" id="socialLinks">
+  <a href="https://www.youtube.com/watch?v=npysvOIDDmM"
+  target="_blank"
+  alt="Facebook">
+    <i class="fab fa-facebook"></i> Facebook
+  </a>
+
+  <a href="https://www.youtube.com/watch?v=pkn-pmwk3ZI"
+  target="_blank"
+  alt="LinkedIn">
+    <i class="fab fa-linkedin"></i> LinkedIn
+  </a>
+
+  <a href="https://www.youtube.com/watch?v=ZZ5LpwO-An4"
+  target="_blank"
+  alt="Instagram">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+</div>
+
+<div class="skills">
+  <h6>Skills</h6>
+  <ul>
+    <li>Basic Ruby</li>
+    <li>SQL & database</li>
+    <li>Basic HTML</li>
+    <li>Basic CSS</li>
+    <li>Cooking</li>
+    <li>Complaining</li>
+  </ul>
+</div>
+
+</body>
+</html>
