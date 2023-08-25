@@ -20,6 +20,11 @@
   </div>
 
   <script>
+      function toggleSocialLinks() {
+    const socialLinks = document.getElementById("socialLinks");
+    socialLinks.classList.toggle("show");
+  }
+
     document.addEventListener("DOMContentLoaded", function () {
       const modeToggle = document.getElementById("toggle_checkbox");
       const body = document.body;
